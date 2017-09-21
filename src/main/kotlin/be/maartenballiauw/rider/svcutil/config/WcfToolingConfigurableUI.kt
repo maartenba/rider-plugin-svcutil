@@ -83,7 +83,7 @@ class WcfToolingConfigurableUI(private val config: WcfToolingConfiguration) {
             editorKit = UIUtil.getHTMLEditorKit()
             isEditable = false
             isEnabled = true
-            text = "<html><body>Make sure to install the Windows SDK that contains <code>svcutil.exe</code>.<br />More information is available at <a href=\"https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe\">from the docs</a>.</body></html>"
+            text = "<html><body>Make sure to install a Windows SDK that contains <code>svcutil.exe</code>.<br />More information is available <a href=\"https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe\">here</a>.</body></html>"
             background = UIUtil.TRANSPARENT_COLOR
             cursor = Cursor(Cursor.HAND_CURSOR)
             addHyperlinkListener {
