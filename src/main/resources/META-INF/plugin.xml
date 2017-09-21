@@ -1,0 +1,38 @@
+<idea-plugin>
+  <id>be.maartenballiauw.rider.svcutil</id>
+  <name>Windows Communication Foundation (WCF) tools</name>
+  <version>0.0.1.0</version>
+  <vendor url="https://blog.maartenballiauw.be">Maarten Balliauw</vendor>
+
+  <idea-version since-build="172.4144" until-build="172.4144.*" />
+
+  <depends>com.intellij.modules.rider</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable groupId="tools" displayName="WCF tooling" id="preferences.WcfToolingConfiguration" instance="be.maartenballiauw.rider.svcutil.config.WcfToolingConfigurable" />
+    <applicationService serviceInterface="be.maartenballiauw.rider.svcutil.config.WcfToolingConfiguration" serviceImplementation="be.maartenballiauw.rider.svcutil.config.WcfToolingConfiguration"/>
+  </extensions>
+
+  <actions>
+    <action class="be.maartenballiauw.rider.svcutil.actions.GenerateWcfServiceClientAction" id="svcutil.GenerateWcfServiceClientAction">
+      <add-to-group group-id="SolutionExplorerPopupMenu" anchor="after" relative-to-action="AddReferenceAction" />
+    </action>
+  </actions>
+
+  <description><![CDATA[
+<p>Rider plugin that allows generating Windows Communication Foundation (WCF) service clients by invoking <code>svcutil.exe</code>.</p>
+<p>Requires <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe"><code>svcutil.exe</code></a> on the developer machine.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li>Specify path to <code>svcutil.exe</code> from Rider settings</li>
+<li>Invoke <code>svcutil.exe</code> using a WSDL URL (try <a href="http://www.dneonline.com/calculator.asmx?WSDL">this one</a>), namespace (defaults to project namespace) and a filename.</li>
+<li>Writes <code>svcutil.exe</code> errors to the event log.</li>
+</ul>
+<p><strong>Links</strong></p>
+<ul>
+<li><a href="https://github.com/maartenba/rider-plugin-svcutil">GitHub</a></li>
+<li><a href="https://github.com/maartenba/rider-plugin-svcutil/issues">Issues</a></li>
+</ul>
+]]>
+  </description>
+</idea-plugin>
