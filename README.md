@@ -14,7 +14,7 @@ Requires [`svcutil.exe`](https://docs.microsoft.com/en-us/dotnet/framework/wcf/s
 
 ## Links
 
-* [Plugin page](https://plugins.jetbrains.com/plugin/9924--net-core-global-json-support)
+* [Plugin page](https://plugins.jetbrains.com/plugin/10051-windows-communication-foundation-wcf-tools)
 * [GitHub](https://github.com/maartenba/rider-plugin-svcutil)
 * [Issues](https://github.com/maartenba/rider-plugin-svcutil/issues)
 
