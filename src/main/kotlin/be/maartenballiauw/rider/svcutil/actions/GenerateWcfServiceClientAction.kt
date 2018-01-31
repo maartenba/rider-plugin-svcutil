@@ -22,7 +22,6 @@ import com.jetbrains.rider.projectView.nodes.ProjectModelNode
 import com.jetbrains.rider.projectView.nodes.containingProject
 import com.jetbrains.rider.projectView.nodes.isProject
 import com.jetbrains.rider.projectView.nodes.presentableName
-import com.jetbrains.rider.util.join
 import javax.swing.SwingUtilities
 
 class GenerateWcfServiceClientAction : ProjectViewActionBase(
@@ -125,7 +124,7 @@ class GenerateWcfServiceClientAction : ProjectViewActionBase(
     private fun AddExistingFile(application: Application, item: ProjectModelNode, fileName: String) {
         var file : VirtualFile? = null
         application.runWriteAction {
-            file = item.getVirtualFile()!!.parent!!.findOrCreateChildData(this, fileName)!!
+            file = item.getVirtualFile()!!.parent!!.findOrCreateChildData(this, fileName)
             AddExistingFileAction.execute(item, file!!)
         }
 
