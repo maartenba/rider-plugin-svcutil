@@ -21,7 +21,6 @@ import com.jetbrains.rider.projectView.actions.newFile.RiderNewActionBase
 import com.jetbrains.rider.projectView.nodes.ProjectModelNode
 import com.jetbrains.rider.projectView.nodes.containingProject
 import com.jetbrains.rider.projectView.nodes.isProject
-import com.jetbrains.rider.projectView.nodes.presentableName
 import javax.swing.SwingUtilities
 
 class GenerateWcfServiceClientAction : ProjectViewActionBase(
@@ -50,7 +49,7 @@ class GenerateWcfServiceClientAction : ProjectViewActionBase(
         if (!util.isEmpty()) {
             // Very, very naive way of getting current project namespace
             // TODO: make this better
-            val serviceNamespace = (item.containingProject()?.descriptor as? RdProjectDescriptor)?.presentableName()!!
+            val serviceNamespace = (item.containingProject()?.descriptor as? RdProjectDescriptor)?.name!!
 
             // Generate a file name
             var serviceFileName = SERVICECLIENT_PREFIX + SERVICECLIENT_SUFFIX
