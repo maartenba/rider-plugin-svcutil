@@ -4,7 +4,7 @@ import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.ui.IdeBorderFactory
 import com.intellij.uiDesigner.core.GridConstraints
 import com.intellij.uiDesigner.core.GridLayoutManager
-import com.jetbrains.rider.protocol.IPermittedModalities
+import com.jetbrains.rdclient.protocol.IPermittedModalities
 import java.awt.Dimension
 import javax.swing.*
 

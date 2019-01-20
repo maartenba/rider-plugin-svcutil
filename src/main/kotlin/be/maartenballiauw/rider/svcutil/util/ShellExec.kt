@@ -26,8 +26,8 @@ class ShellExec @JvmOverloads constructor(private val readOutput: Boolean = fals
     fun execute(command: String, workdir: String?, wait: Boolean, vararg args: String): Int {
         var cmdArr: Array<String>
 
-        if (args != null && args.size > 0) {
-            cmdArr = Array<String>(1 + args.size, { _ -> "" })
+        if (args != null && args.isNotEmpty()) {
+            cmdArr = Array(1 + args.size, { _ -> "" })
             cmdArr[0] = command
             System.arraycopy(args, 0, cmdArr, 1, args.size)
         } else {
